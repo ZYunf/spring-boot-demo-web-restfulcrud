@@ -26,18 +26,19 @@
                 <div class="card col-lg-4 ml-auto mr-auto">
                     <div class="card-body">
                         <h2 class="card-title text-center" th:text="#{login.tip}">Login</h2>
-                        <form>
+                        <p style="color: red;" th:text="${msg}" th:if="not ${#strings.isEmpty(msg)}"></p>
+                        <form th:action="@{/user/login}" method="post">
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="icon-user"></i></span>
-                                    <input type="text" class="form-control" placeholder="Username"
+                                    <input type="text" class="form-control" placeholder="Username" name="username"
                                            th:placeholder="#{login.username}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="icon-lock"></i></span>
-                                    <input type="text" class="form-control" placeholder="Password"
+                                    <input type="text" class="form-control" placeholder="Password" name="password"
                                            th:placeholder="#{login.password}">
                                 </div>
                             </div>
