@@ -20,6 +20,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class MyMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
+
         registry.addViewController("/zyf").setViewName("index");
     }
 
@@ -28,7 +29,9 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
         WebMvcConfigurerAdapter adapter = new WebMvcConfigurerAdapter() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
-                registry.addViewController("/").setViewName("authentication/login");
+                registry.addViewController("/login.html").setViewName("authentication/login");
+                registry.addViewController("/zhangsanfeng").setViewName("/index");
+                registry.addViewController("/index").setViewName("/index");
             }
 
             //注册拦截器
