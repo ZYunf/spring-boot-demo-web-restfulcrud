@@ -20,20 +20,21 @@ import java.util.Map;
 public class LoginController {
 
     //@RequestMapping(value = "/user/login",method = RequestMethod.POST)
-    @PostMapping(value ="/user/login")
+    @PostMapping(value ="login")
     public String login(@RequestParam("password") String password, @RequestParam("username")String username, Map<String,Object> map, HttpSession session){
         if(!StringUtils.isEmpty(username)&&"123456".equals(password)){
         session.setAttribute("loginUser",username );
-        return "index";
+        return "/index";
         }else {
             map.put("msg","用户名密码错误" );
             return "/authentication/login";
         }
     }
 
+
     @RequestMapping("/")
     public String show(){
-        return "samples/register";
+        return "index";
     }
 
 }

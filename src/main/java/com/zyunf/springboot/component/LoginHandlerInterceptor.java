@@ -20,7 +20,7 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
         if (loginuser == null) {
             //未登录,返回登录页面
             httpServletRequest.setAttribute("msg","没有权限请先登录" );
-            httpServletRequest.getRequestDispatcher("/login.html").forward(httpServletRequest,httpServletResponse );
+            httpServletRequest.getRequestDispatcher("/logins").forward(httpServletRequest,httpServletResponse );
             return false;
         } else {
             //已登录

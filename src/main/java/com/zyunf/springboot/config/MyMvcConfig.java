@@ -29,15 +29,14 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
         WebMvcConfigurerAdapter adapter = new WebMvcConfigurerAdapter() {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
-                registry.addViewController("/login.html").setViewName("authentication/login");
-                registry.addViewController("/zhangsanfeng").setViewName("/index");
+                registry.addViewController("/logins").setViewName("authentication/login");
                 registry.addViewController("/index").setViewName("/index");
             }
 
             //注册拦截器
             //@Override
             //public void addInterceptors(InterceptorRegistry registry) {
-            //    registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").excludePathPatterns("/","/user/login","login.html");
+            //    registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").excludePathPatterns("/","/logins","/index","/login");
             //}
         };
 

@@ -288,19 +288,19 @@ $(function () {
 
     var salesChartData ={
       datasets: [{
-        data: [30, 40, 30],
+        data: [20, 50, 30],
         backgroundColor: [
             '#745af2',
-            '#5cd069',
+            '#1ed010',
             '#fecb01'
         ]
       }],
 
       // These labels appear in the legend and in the tooltips when hovering different arcs
       labels: [
-          'Organic Sale',
-          'Search Engine',
-          'Marketing',
+          '有机销售',
+          '搜索引擎',
+          '市场营销',
       ]
     };
     var salesChartOptions = {
@@ -318,7 +318,7 @@ $(function () {
         data: [30, 30, 40],
         backgroundColor: [
             '#002388',
-            '#5cd069',
+            '#bfd021',
             '#ea2c54'
         ]
       }],

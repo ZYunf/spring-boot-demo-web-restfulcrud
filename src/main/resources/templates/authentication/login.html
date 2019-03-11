@@ -27,7 +27,7 @@
                     <div class="card-body">
                         <h2 class="card-title text-center" th:text="#{login.tip}">Login</h2>
                         <p style="color: red;" th:text="${msg}" th:if="not ${#strings.isEmpty(msg)}"></p>
-                        <form th:action="@{/user/login}" method="post">
+                        <form th:action="@{login}" method="post">
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="icon-user"></i></span>
@@ -38,15 +38,15 @@
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="icon-lock"></i></span>
-                                    <input type="text" class="form-control" placeholder="Password" name="password"
+                                    <input type="password" class="form-control" placeholder="Password" name="password"
                                            th:placeholder="#{login.password}">
                                 </div>
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary" th:text="#{login.tip}">Login</button>
                                 <p class="mt-4 mb-3 text-muted">@ZYunf-2019</p>
-                                <a class="btn btn-sm" th:href="@{/login.html(l='zh_CN')}">中文</a>
-                                <a class="btn btn-sm" th:href="@{/login.html(l='en_US')}">English</a>
+                                <a class="btn btn-sm" th:href="@{/logins(l='zh_CN')}">中文</a>
+                                <a class="btn btn-sm" th:href="@{/logins(l='en_US')}">English</a>
                             </div>
                         </form>
                     </div>
