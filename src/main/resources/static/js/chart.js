@@ -288,11 +288,12 @@ $(function () {
 
     var salesChartData ={
       datasets: [{
-        data: [20, 50, 30],
+        data: [10, 50, 30,10],
         backgroundColor: [
             '#745af2',
             '#1ed010',
-            '#fecb01'
+            '#fecb01',
+            '#fe341b'
         ]
       }],
 
@@ -301,6 +302,7 @@ $(function () {
           '有机销售',
           '搜索引擎',
           '市场营销',
+          '是否营销'
       ]
     };
     var salesChartOptions = {
